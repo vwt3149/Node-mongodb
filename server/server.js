@@ -22,7 +22,7 @@ app.post('/todos', (req,res) => {
         // sending back to user information
         res.send(result)
         console.log();
-        console.log(`Successful\n ${result}`);
+        // console.log(`Successful\n ${result}`);
 
 
     }).catch((err) => {
@@ -40,7 +40,7 @@ app.get('/todos', (req, res) => {
         res.send({result});
     }, (err) => {
         res.status(400).send(err);
-    })
+    });
 });// End GET
 
 app.listen(8080, () => {
