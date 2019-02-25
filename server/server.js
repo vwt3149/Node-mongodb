@@ -7,6 +7,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 
 var app = express();
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());//middleware 3th party
 
@@ -63,9 +64,9 @@ app.get('/todos/:id', (req,res) => {
 
 })
 
-app.listen(8080, () => {
+app.listen(port, () => {
     console.log();
-    console.log('Server started on port 8080');
+    console.log(`Server started on port ${port}`);
 });
 
 module.exports = {app}
